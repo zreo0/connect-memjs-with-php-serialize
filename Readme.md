@@ -1,5 +1,6 @@
 
-# connect-memjs
+# connect-memjs-with-php-serialize
+## fork from [connect-memjs](https://github.com/alevy/memjs), to get php session like `nick|s:8:"testNick";`
 
   Memcached session store forked from using [connect-memcached](https://github.com/balor/connect-memcached), using [memjs](https://github.com/alevy/memjs) as the underlying memcached client.
 
@@ -11,7 +12,7 @@
 
   via npm:
 
-      $ npm install connect-memjs
+      $ npm install connect-memjs-with-php-serialize
 
 ## Example
 
@@ -29,7 +30,7 @@
 
       // pass the express to the connect memcached module
       // allowing it to inherit from express.session.Store
-      var MemcachedStore = require('connect-memjs')(session);
+      var MemcachedStore = require('connect-memjs-with-php-serialize')(session);
 
       app.use(favicon());
 
@@ -47,7 +48,7 @@
       var store = new MemcachedStore({servers: ['127.0.0.1:1121'], username: 'liam', password: 'hunter2'});
       app.use(session({ 
         secret: 'CatOnTheKeyboard', 
-        store:  
+        store,
       }));
 
       app.get('/', function(req, res){
@@ -66,6 +67,7 @@
 ## Options
 
     - `servers` Memcached servers locations, as an array of strings.
+    - `isUsePHPSession` Optional, set to true if you want to sync with php session
     - `username` An optional username to authenticate with
     - `password` An optional password to authenticate with
     - `prefix` An optional prefix for each memcache key, in case you are sharing 

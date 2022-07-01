@@ -1,7 +1,7 @@
 {
-  "name": "connect-memjs",
-  "version": "0.2.1",
-  "description": "Memcached session store for Connect backed by memjs",
+  "name": "connect-memjs-with-php-serialize",
+  "version": "0.0.1",
+  "description": "Memcached session store for Connect backed by memjs, use php session serialize",
   "keywords": [
     "memcached",
     "connection",
@@ -19,11 +19,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/liamdon/connect-memjs"
+    "url": "https://github.com/zreo0/connect-memjs-with-php-serialize"
   },
   "dependencies": {
     "debug": "^2.6.3",
-    "memjs": ">= 1.0.0-rc.1"
+    "memjs": ">= 1.0.0-rc.1",
+    "php-unserialize": "^0.0.1"
   },
   "devDependencies": {
     "connect": ">= 1.4.x"

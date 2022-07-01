@@ -6,3 +6,5 @@ examples
 History.md
 Makefile
 doc.json
+.editorconfig
+.history
