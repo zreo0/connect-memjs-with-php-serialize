@@ -1,6 +1,6 @@
 {
   "name": "connect-memjs-with-php-serialize",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Memcached session store for Connect backed by memjs, use php session serialize",
   "keywords": [
     "memcached",
